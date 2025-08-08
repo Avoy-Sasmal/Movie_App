@@ -1,5 +1,19 @@
-.App{
+.App {
   display: grid;
   grid-template-rows: 80px auto;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+}
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App {
+    grid-template-rows: 70px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    grid-template-rows: 60px auto;
+  }
 }

@@ -1,32 +1,47 @@
-.movie_list_header{
+.movie_list_header {
   padding: 10px 30px;
   margin-bottom: 5px;
   justify-content: space-between;
+  background-color: var(--bg-secondary);
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
-.movie_list_heading{
+.movie_list_heading {
   font-size: 26px;
-  color: #4fec64;
+  color: var(--accent-primary);
 }
 
-
-.movie_filter{
+.movie_filter {
   list-style: none;
   font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.movie_filter_item{
+.movie_filter_item {
   padding: 5px 10px;
   cursor: pointer;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+  border-radius: 5px;
+  white-space: nowrap;
 }
-.movie_filter_item.active{
-  border-bottom: 1px solid #e6e6e6;
+
+.movie_filter_item:hover {
+  color: var(--accent-primary);
+  background: var(--hover-bg);
+}
+
+.movie_filter_item.active {
+  border-bottom: 1px solid var(--accent-primary);
   font-weight: 500;
+  color: var(--accent-primary);
 }
 
-
-.movie_sorting{
-  border: none;
+.movie_sorting {
+  border: 1px solid var(--border-color);
   outline: none;
   border-radius: 5px;
   font-size: 16px;
@@ -35,14 +50,101 @@
   height: 30px;
   padding: 0 5px;
   margin: 0 10px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: border-color 0.3s ease;
+  min-width: 120px;
 }
 
-.card_emoji{
-  color:yellow;
+.movie_sorting:focus {
+  border-color: var(--accent-primary);
 }
-.movie_cards{
+
+.card_emoji {
+  color: var(--accent-primary);
+}
+
+.movie_cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  background-color: var(--bg-secondary);
+  padding: 20px;
+  gap: 20px;
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .movie_list_header {
+    padding: 10px 20px;
+  }
+
+  .movie_cards {
+    padding: 15px;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .movie_list_header {
+    padding: 10px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .movie_list_heading {
+    font-size: 22px;
+  }
+
+  .movie_filter {
+    font-size: 14px;
+    gap: 8px;
+  }
+
+  .movie_filter_item {
+    padding: 4px 8px;
+  }
+
+  .movie_sorting {
+    font-size: 14px;
+    height: 28px;
+    margin: 0 5px;
+    min-width: 100px;
+  }
+
+  .movie_cards {
+    padding: 10px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie_list_header {
+    padding: 8px 10px;
+  }
+
+  .movie_list_heading {
+    font-size: 18px;
+  }
+
+  .movie_filter {
+    font-size: 12px;
+    gap: 5px;
+  }
+
+  .movie_filter_item {
+    padding: 3px 6px;
+  }
+
+  .movie_sorting {
+    font-size: 12px;
+    height: 26px;
+    margin: 0 3px;
+    min-width: 80px;
+  }
+
+  .movie_cards {
+    padding: 5px;
+    gap: 8px;
+  }
+}
