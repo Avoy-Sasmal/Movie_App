@@ -12,12 +12,11 @@ This README explains how to run the project, the project's structure, and import
 - Available scripts
 - Project structure (file/folder explanations)
 - Important implementation details
-- Troubleshooting & notes
-- Next steps / improvements
+
 
 ## Project overview
 
-The app is a front-end-only React project scaffolded with Vite. It fetches movie lists from the TMDb API and displays them with a few UI helpers:
+The app is a front-end-only React project scaffolded with Vite. It fetches movie lists from the TMDb API and displays them :
 
 - Paging via sections: Popular, Top Rated, Upcoming
 - Client-side filtering by minimum rating
